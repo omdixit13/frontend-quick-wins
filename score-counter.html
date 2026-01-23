@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Score Counter</title>
+</head>
+<body>
+
+    <h2>Score: <span id="score">0</span></h2>
+
+    <button onclick="increase()">+</button>
+    <button onclick="decrease()">-</button>
+    <button onclick="reset()">Reset</button>
+
+    <script>
+        let score = 0;
+
+        function increase() {
+            score++;
+            document.getElementById("score").innerText = score;
+        }
+
+        function decrease() {
+            if (score > 0) score--;
+            document.getElementById("score").innerText = score;
+        }
+
+        function reset() {
+            score = 0;
+            document.getElementById("score").innerText = score;
+        }
+    </script>
+
+</body>
+</html>
