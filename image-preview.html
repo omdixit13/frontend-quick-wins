@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Preview</title>
+</head>
+<body>
+
+    <h3>Image Preview</h3>
+    <input type="file" onchange="preview(event)">
+    <br><br>
+    <img id="img" width="200">
+
+    <script>
+        function preview(event) {
+            const img = document.getElementById("img");
+            img.src = URL.createObjectURL(event.target.files[0]);
+        }
+    </script>
+
+</body>
+</html>
