@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Submit Alert</title>
+</head>
+<body>
+
+    <h3>Contact Form</h3>
+    <form onsubmit="submitForm(event)">
+        <input placeholder="Name" required>
+        <input placeholder="Email" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function submitForm(e) {
+            e.preventDefault();
+            alert("Form submitted successfully!");
+        }
+    </script>
+
+</body>
+</html>
