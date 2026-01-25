@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Accordion</title>
+</head>
+<body>
+
+<h3 onclick="toggle()">Click to Toggle</h3>
+<p id="content" style="display:none;">Hidden accordion content</p>
+
+<script>
+function toggle(){
+  const c = document.getElementById("content");
+  c.style.display = c.style.display === "none" ? "block" : "none";
+}
+</script>
+
+</body>
+</html>
