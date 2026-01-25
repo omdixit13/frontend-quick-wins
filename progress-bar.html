@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Progress Bar</title>
+</head>
+<body>
+
+<h3>Progress</h3>
+<div style="width:300px;border:1px solid #000;">
+  <div id="bar" style="height:20px;width:0;background:green;"></div>
+</div>
+<br>
+<button onclick="fill()">Increase</button>
+
+<script>
+let width = 0;
+function fill(){
+  if(width < 100){
+    width += 10;
+    document.getElementById("bar").style.width = width + "%";
+  }
+}
+</script>
+
+</body>
+</html>
