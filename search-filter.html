@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search Filter</title>
+</head>
+<body>
+
+  <h3>Search Filter</h3>
+  <input type="text" id="search" onkeyup="filter()" placeholder="Search items">
+
+  <ul id="list">
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Orange</li>
+    <li>Mango</li>
+    <li>Pineapple</li>
+  </ul>
+
+  <script>
+    function filter() {
+      const input = document.getElementById("search").value.toLowerCase();
+      const items = document.getElementById("list").getElementsByTagName("li");
+
+      for (let i = 0; i < items.length; i++) {
+        const text = items[i].innerText.toLowerCase();
+        items[i].style.display = text.includes(input) ? "" : "none";
+      }
+    }
+  </script>
+
+</body>
+</html>
