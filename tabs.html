@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tabs</title>
+  <style>
+    .tab { display:inline-block; padding:8px 12px; border:1px solid #ccc; cursor:pointer; }
+    .active { background:#eee; }
+    .content { display:none; margin-top:10px; }
+  </style>
+</head>
+<body>
+
+  <div>
+    <span class="tab active" onclick="openTab(0)">Tab 1</span>
+    <span class="tab" onclick="openTab(1)">Tab 2</span>
+    <span class="tab" onclick="openTab(2)">Tab 3</span>
+  </div>
+
+  <div class="content" style="display:block;">Content for Tab 1</div>
+  <div class="content">Content for Tab 2</div>
+  <div class="content">Content for Tab 3</div>
+
+  <script>
+    function openTab(index) {
+      const tabs = document.getElementsByClassName("tab");
+      const contents = document.getElementsByClassName("content");
+
+      for (let i = 0; i < tabs.length; i++) {
+        tabs[i].classList.remove("active");
+        contents[i].style.display = "none";
+      }
+
+      tabs[index].classList.add("active");
+      contents[index].style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
