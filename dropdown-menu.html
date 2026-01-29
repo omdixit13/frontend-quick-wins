@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dropdown Menu</title>
+</head>
+<body>
+
+  <h3>Dropdown Menu</h3>
+
+  <select onchange="show(this.value)">
+    <option value="">Select</option>
+    <option value="HTML">HTML</option>
+    <option value="CSS">CSS</option>
+    <option value="JavaScript">JavaScript</option>
+  </select>
+
+  <p id="output"></p>
+
+  <script>
+    function show(value) {
+      document.getElementById("output").innerText =
+        value ? "You selected: " + value : "";
+    }
+  </script>
+
+</body>
+</html>
