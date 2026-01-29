@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pagination</title>
+</head>
+<body>
+
+  <h3>Pagination Example</h3>
+
+  <p id="page">Page 1</p>
+
+  <button onclick="prev()">Prev</button>
+  <button onclick="next()">Next</button>
+
+  <script>
+    let page = 1;
+
+    function next() {
+      page++;
+      document.getElementById("page").innerText = "Page " + page;
+    }
+
+    function prev() {
+      if (page > 1) page--;
+      document.getElementById("page").innerText = "Page " + page;
+    }
+  </script>
+
+</body>
+</html>
