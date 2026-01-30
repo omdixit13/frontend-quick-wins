@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Star Rating</title>
+  <style>
+    .star {
+      font-size: 30px;
+      cursor: pointer;
+      color: gray;
+    }
+    .active {
+      color: gold;
+    }
+  </style>
+</head>
+<body>
+
+  <h3>Rate this</h3>
+
+  <span class="star" onclick="rate(1)">★</span>
+  <span class="star" onclick="rate(2)">★</span>
+  <span class="star" onclick="rate(3)">★</span>
+  <span class="star" onclick="rate(4)">★</span>
+  <span class="star" onclick="rate(5)">★</span>
+
+  <p id="output"></p>
+
+  <script>
+    function rate(n) {
+      const stars = document.getElementsByClassName("star");
+      for (let i = 0; i < stars.length; i++) {
+        stars[i].classList.remove("active");
+        if (i < n) stars[i].classList.add("active");
+      }
+      document.getElementById("output").innerText = "Rating: " + n;
+    }
+  </script>
+
+</body>
+</html>
