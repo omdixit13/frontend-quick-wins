@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tooltip</title>
+  <style>
+    .box {
+      display: inline-block;
+      padding: 10px;
+      border: 1px solid #000;
+      position: relative;
+      cursor: pointer;
+    }
+    .tip {
+      display: none;
+      position: absolute;
+      top: 35px;
+      left: 0;
+      background: black;
+      color: white;
+      padding: 5px;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box" onmouseover="show()" onmouseout="hide()">
+    Hover me
+    <div class="tip" id="tip">This is a tooltip</div>
+  </div>
+
+  <script>
+    function show() {
+      document.getElementById("tip").style.display = "block";
+    }
+    function hide() {
+      document.getElementById("tip").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
